@@ -1,13 +1,15 @@
 <template>
   <section class="featured-posts">
     <PostPreview
-      id="102"
-      :is-admin="!isAdmin"
-      thumbnail="https://image.freepik.com/vector-gratis/doodle-redes-sociales-garabatos-sitios-web-internet-comunicacion-redes-sociales-conjunto-iconos-dibujados-mano-web-linea_102902-813.jpg"
-      title="Social Media Records"
-      preview="Why so many people need socials?"
+      v-for="post in posts"
+      :key="post.id"
+      :id="post.id"
+      :is-admin="isAdmin"
+      :thumbnail="post.thumbnail"
+      :title="post.title"
+      :preview="post.previewText"
     />
-    <PostPreview
+    <!-- <PostPreview
       id="103"
       :is-admin="isAdmin"
       thumbnail="https://image.freepik.com/vector-gratis/doodle-redes-sociales-garabatos-sitios-web-internet-comunicacion-redes-sociales-conjunto-iconos-dibujados-mano-web-linea_102902-813.jpg"
@@ -20,7 +22,7 @@
       thumbnail="https://image.freepik.com/vector-gratis/doodle-redes-sociales-garabatos-sitios-web-internet-comunicacion-redes-sociales-conjunto-iconos-dibujados-mano-web-linea_102902-813.jpg"
       title="Facebook changes company name"
       preview="From 1st November Meta is a new brand name for Facebook "
-    />
+    /> -->
   </section>
 </template>
 <script>
@@ -33,6 +35,10 @@ export default {
     isAdmin: {
       type: Boolean,
       default: true,
+    },
+    posts: {
+      type: Array,
+      required: true,
     },
   },
 };

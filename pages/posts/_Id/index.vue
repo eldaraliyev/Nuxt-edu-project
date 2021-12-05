@@ -1,15 +1,4 @@
 <template>
-  <!-- <div class="single-post-page">
-    <section class="post">
-      <h1 class="post-title">Title of the Post</h1>
-      <div class="post-details">
-        <div class="post-detail">Last updated on XXX</div>
-        <div class="post-detail">Written by NAME</div>
-      </div>
-      <p class="post-content">Content of the post</p>
-    </section>
-    <section class="post-feedback">Please let me your feedback to <a href="mailto:goodmail@awesome-domain.com">goodmail@awesome-domain.com</a>.</section>
-  </div> -->
   <div>
     <PostPage
       title="Technical innovations"
