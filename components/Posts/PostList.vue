@@ -7,22 +7,8 @@
       :is-admin="isAdmin"
       :thumbnail="post.thumbnail"
       :title="post.title"
-      :preview="post.previewText"
+      :preview="post.preview"
     />
-    <!-- <PostPreview
-      id="103"
-      :is-admin="isAdmin"
-      thumbnail="https://image.freepik.com/vector-gratis/doodle-redes-sociales-garabatos-sitios-web-internet-comunicacion-redes-sociales-conjunto-iconos-dibujados-mano-web-linea_102902-813.jpg"
-      title="Telegram on hype"
-      preview="Many users prefer to use safe and freedom environmnet"
-    />
-    <PostPreview
-      id="104"
-      :is-admin="isAdmin"
-      thumbnail="https://image.freepik.com/vector-gratis/doodle-redes-sociales-garabatos-sitios-web-internet-comunicacion-redes-sociales-conjunto-iconos-dibujados-mano-web-linea_102902-813.jpg"
-      title="Facebook changes company name"
-      preview="From 1st November Meta is a new brand name for Facebook "
-    /> -->
   </section>
 </template>
 <script>
@@ -34,7 +20,7 @@ export default {
   props: {
     isAdmin: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     posts: {
       type: Array,

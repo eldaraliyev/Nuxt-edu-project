@@ -1,18 +1,26 @@
 <template>
   <div>
     <PostPage
-      title="Technical innovations"
-      date="20.11.2021"
-      author="Eldar Aliyev"
-      content="Lorem ipsum dolor sit amet consectetur adipisicing elit. In, illum? Repellat tempora, voluptatum nulla itaque asperiores obcaecati maiores nemo aliquid. Atque aspernatur eveniet facere sequi voluptatibus, alias pariatur iusto. Voluptates."
+      :title="loadedPost.title"
+      :id="loadedPost.id"
+      :date="loadedPost.date"
+      :author="loadedPost.author"
+      :content="loadedPost.content"
     />
   </div>
 </template>
 <script>
-import PostPage from "@/components/Posts/PostPage";
+
 export default {
-  components: {
-    PostPage,
+  asyncData(context) {
+    return context.app.$axios
+      .get("/posts/" + context.params.Id + ".json")
+      .then((res) => {
+        return {
+          loadedPost: res.data,
+        };
+      })
+      .catch((e) => context.error(e));
   },
 };
 </script>

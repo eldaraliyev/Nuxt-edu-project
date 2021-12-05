@@ -49,7 +49,7 @@ export default {
 <style scoped>
 .post-preview {
   border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
+  box-shadow: 0 1px 10px #ccc;
   background-color: white;
   width: 90%;
 }
@@ -61,7 +61,8 @@ a {
 
 @media (min-width: 850px) {
   .post-preview {
-    width: 400px;
+    width: 350px;
+    height: 320px;
     margin: 10px;
   }
 }
@@ -77,9 +78,12 @@ a {
   padding: 10px;
   text-align: center;
 }
-
+.post-content p {
+  font-size: 1em;
+}
 a:hover .post-content,
 a:active .post-content {
   background-color: #ccc;
+  transition: .3s;
 }
 </style>

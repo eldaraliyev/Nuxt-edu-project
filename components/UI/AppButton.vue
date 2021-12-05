@@ -24,7 +24,8 @@ export default {
   font: inherit;
   background-color: black;
   color: white;
-  padding: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
   border: 1px solid black;
 }

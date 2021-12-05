@@ -31,6 +31,9 @@ export default {
 </script>
 
 <style scoped>
+label {
+  margin-bottom: 5px;
+}
 .input-control {
   margin: 10px 0;
 }
@@ -48,6 +51,7 @@ export default {
   font: inherit;
   border: 1px solid #ccc;
   padding: 5px;
+  resize: none;
 }
 
 .input-control input:focus,

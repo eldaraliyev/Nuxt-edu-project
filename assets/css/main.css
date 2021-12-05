@@ -1,7 +1,3 @@
-html {
-  background-color: #fff;
-}
-
 * {
   font-family: 'Segoe UI', sans-serif;
 }
@@ -12,4 +8,14 @@ body {
 
 p {
   font-size: 1.5em;
+}
+
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.3s;
+}
+
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
 }

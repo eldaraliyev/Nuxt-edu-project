@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt-edu-project',
+    title: 'Nuxt Blogpost • Nuxtjs',
     htmlAttrs: {
       lang: 'en'
     },
@@ -20,7 +20,9 @@ export default {
   css: ['~/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    '~plugins/global-components.js'
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -29,8 +31,18 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
-
+  modules: ['@nuxtjs/moment', '@nuxtjs/axios'],
+  axios: {
+    baseUrl: process.env.BASE_URL || 'https://nuxt-test-database-default-rtdb.europe-west1.firebasedatabase.app',
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {},
+
+  env: {
+    authApiKey: 'AIzaSyAcd_IUtbzISF1-3DIO5m5ytL2Xc1DDN58'
+  },
+  transition: {
+    name: 'layout',
+    mode: 'out-in'
+  }
 }

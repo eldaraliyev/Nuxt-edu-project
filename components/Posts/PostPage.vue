@@ -1,14 +1,19 @@
 <template>
   <div class="single-post-page">
     <section class="post">
-      <h1 class="post-title">{{title}}</h1>
+      <h1 class="post-title">{{ title }}</h1>
       <div class="post-details">
-        <div class="post-detail">{{date}}</div>
-        <div class="post-detail">{{author}}</div>
+        <div class="post-detail">Last updated on: {{ date }}</div>
+        <div class="post-detail">Post creator: {{ author }}</div>
       </div>
-      <p class="post-content">{{content}}</p>
+      <p class="post-content">{{ content }}</p>
     </section>
-    <section class="post-feedback">Please let me your feedback to <a href="mailto:goodmail@awesome-domain.com">goodmail@awesome-domain.com</a>.</section>
+    <section class="post-feedback">
+      Please let me your feedback to
+      <a href="mailto:goodmail@awesome-domain.com"
+        >goodmail@awesome-domain.com</a
+      >.
+    </section>
   </div>
 </template>
 <script>

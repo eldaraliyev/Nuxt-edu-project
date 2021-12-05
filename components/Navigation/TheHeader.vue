@@ -15,7 +15,7 @@
       </div>
     </header>
   </div>
-</template>   
+</template>
 
 <script>
 import TheSideNavToggle from "@/components/Navigation/TheSideNavToggle";

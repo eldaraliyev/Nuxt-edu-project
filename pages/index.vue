@@ -7,29 +7,12 @@
   </div>
 </template>
 <script>
-import PostList from "@/components/Posts/PostList";
 export default {
-  components: {
-    PostList,
+  computed: {
+    loadedPosts() {
+      return this.$store.getters.loadedPosts;
+    },
   },
-  data(){
-    return {
-      loadedPosts:[
-        {
-          id:"103",
-          thumbnail:"https://image.freepik.com/vector-gratis/doodle-redes-sociales-garabatos-sitios-web-internet-comunicacion-redes-sociales-conjunto-iconos-dibujados-mano-web-linea_102902-813.jpg",
-          title:"Telegram on hype",
-          preview:"Many users prefer to use safe and freedom environmnet"
-        },
-        {
-          id:"104",
-          thumbnail:"https://image.freepik.com/vector-gratis/doodle-redes-sociales-garabatos-sitios-web-internet-comunicacion-redes-sociales-conjunto-iconos-dibujados-mano-web-linea_102902-813.jpg",
-          title:"Facebook changes company name",
-          preview:"From 1st November Meta is a new brand name for Facebook "
-        }
-      ]
-    }
-  }
 };
 </script>
 <style scoped>
