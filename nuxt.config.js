@@ -39,7 +39,7 @@ export default {
   build: {},
 
   env: {
-    authApiKey: 'AIzaSyAcd_IUtbzISF1-3DIO5m5ytL2Xc1DDN58'
+    authApiKey: hidden
   },
   transition: {
     name: 'layout',
